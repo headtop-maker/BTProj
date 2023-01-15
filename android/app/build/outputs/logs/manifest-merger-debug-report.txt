@@ -9,6 +9,7 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] /home/dima/.gradle/caches/tra
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /home/dima/.gradle/caches/transforms-3/7952493278d8a1277d715b75ecbe0141/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /home/dima/.gradle/caches/transforms-3/db3a47e8c95f09672d16276f59e39301/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [:react-native-async-storage_async-storage] /home/dima/native/BTProj/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-fast-image] /home/dima/native/BTProj/node_modules/react-native-fast-image/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.68.2] /home/dima/.gradle/caches/transforms-3/6c62b7c8a3ffd2bf9a4e806ac8daa197/transformed/jetified-react-native-0.68.2/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/dima/.gradle/caches/transforms-3/6a0f20da40e36f8b68fb9258749fdfb9/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gradle/caches/transforms-3/ac03cc428528b64ebe64a8da4ba29e56/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:16:1-26:12
@@ -30,9 +31,11 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] /home/dima/.gradle
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] /home/dima/.gradle/caches/transforms-3/79a19e6ea64b2264ab68f7987723df9f/transformed/jetified-imagepipeline-base-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat:1.3.0] /home/dima/.gradle/caches/transforms-3/f4ae17446ba7247a2892e6b10f6ac5cc/transformed/appcompat-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /home/dima/.gradle/caches/transforms-3/4ca5ba47daf6d0611c08fc0707ea839e/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.autofill:autofill:1.1.0] /home/dima/.gradle/caches/transforms-3/a41789378f0fc11dee6281794d0c05ac/transformed/jetified-autofill-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:middleware:2.6.0] /home/dima/.gradle/caches/transforms-3/7d6c6cb3e7effbd842e7202633ebfed9/transformed/jetified-middleware-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /home/dima/.gradle/caches/transforms-3/b395d73d00a1ce578a6d379e90752991/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/dima/.gradle/caches/transforms-3/6d632040c3a616d46cbdf977a52fc109/transformed/jetified-glide-4.12.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /home/dima/.gradle/caches/transforms-3/2db8771f6cc3ad4b758c89a6a9a6b142/transformed/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/dima/.gradle/caches/transforms-3/709573e79a5e8e94fd657d65bc51a2f2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dima/.gradle/caches/transforms-3/e5373294fd5a3f37ba0e45386f39da69/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -50,6 +53,8 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] /home/dima/.gradle/caches/tra
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /home/dima/.gradle/caches/transforms-3/295e452eebda884d2b1557272c48a495/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/dima/.gradle/caches/transforms-3/32868e084b86a5eba1cbc9becd646ec4/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.1.0] /home/dima/.gradle/caches/transforms-3/199bf8f3704078abec467141c22a5947/transformed/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/dima/.gradle/caches/transforms-3/6f069c528f7d769b841cdc24c0846ba2/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/dima/.gradle/caches/transforms-3/76464d44bb28b2bf7aede4ce77fff781/transformed/exifinterface-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dima/.gradle/caches/transforms-3/61760d420bf14935ce85c2f2c9e6d42f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.tracing:tracing:1.0.0] /home/dima/.gradle/caches/transforms-3/72473111f3673cc93fca28a8e855b6a4/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dima/.gradle/caches/transforms-3/c9c540f9c432e715ffd076fe663e3fca/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
@@ -101,8 +106,14 @@ MERGED from [com.google.android.gms:play-services-basement:18.0.0] /home/dima/.g
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gradle/caches/transforms-3/ac03cc428528b64ebe64a8da4ba29e56/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
 MERGED from [com.facebook.soloader:soloader:0.10.3] /home/dima/.gradle/caches/transforms-3/15b6df5ffd9bb86801fc1e743ffc5654/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.3] /home/dima/.gradle/caches/transforms-3/15b6df5ffd9bb86801fc1e743ffc5654/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/dima/.gradle/caches/transforms-3/6d632040c3a616d46cbdf977a52fc109/transformed/jetified-glide-4.12.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/dima/.gradle/caches/transforms-3/6d632040c3a616d46cbdf977a52fc109/transformed/jetified-glide-4.12.0/AndroidManifest.xml:10:5-20
 MERGED from [androidx.core:core:1.5.0] /home/dima/.gradle/caches/transforms-3/aa90e24f27a9f109c945c2275ce8f1aa/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.5.0] /home/dima/.gradle/caches/transforms-3/aa90e24f27a9f109c945c2275ce8f1aa/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/dima/.gradle/caches/transforms-3/6f069c528f7d769b841cdc24c0846ba2/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/dima/.gradle/caches/transforms-3/6f069c528f7d769b841cdc24c0846ba2/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dima/.gradle/caches/transforms-3/61760d420bf14935ce85c2f2c9e6d42f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dima/.gradle/caches/transforms-3/61760d420bf14935ce85c2f2c9e6d42f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
@@ -167,6 +178,8 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /home/dima/.gra
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /home/dima/.gradle/caches/transforms-3/db3a47e8c95f09672d16276f59e39301/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [:react-native-async-storage_async-storage] /home/dima/native/BTProj/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-async-storage_async-storage] /home/dima/native/BTProj/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-fast-image] /home/dima/native/BTProj/node_modules/react-native-fast-image/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-fast-image] /home/dima/native/BTProj/node_modules/react-native-fast-image/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.68.2] /home/dima/.gradle/caches/transforms-3/6c62b7c8a3ffd2bf9a4e806ac8daa197/transformed/jetified-react-native-0.68.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.68.2] /home/dima/.gradle/caches/transforms-3/6c62b7c8a3ffd2bf9a4e806ac8daa197/transformed/jetified-react-native-0.68.2/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/dima/.gradle/caches/transforms-3/6a0f20da40e36f8b68fb9258749fdfb9/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -209,12 +222,16 @@ MERGED from [androidx.appcompat:appcompat:1.3.0] /home/dima/.gradle/caches/trans
 MERGED from [androidx.appcompat:appcompat:1.3.0] /home/dima/.gradle/caches/transforms-3/f4ae17446ba7247a2892e6b10f6ac5cc/transformed/appcompat-1.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /home/dima/.gradle/caches/transforms-3/4ca5ba47daf6d0611c08fc0707ea839e/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /home/dima/.gradle/caches/transforms-3/4ca5ba47daf6d0611c08fc0707ea839e/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.autofill:autofill:1.1.0] /home/dima/.gradle/caches/transforms-3/a41789378f0fc11dee6281794d0c05ac/transformed/jetified-autofill-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.1.0] /home/dima/.gradle/caches/transforms-3/a41789378f0fc11dee6281794d0c05ac/transformed/jetified-autofill-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.facebook.fresco:middleware:2.6.0] /home/dima/.gradle/caches/transforms-3/7d6c6cb3e7effbd842e7202633ebfed9/transformed/jetified-middleware-2.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:middleware:2.6.0] /home/dima/.gradle/caches/transforms-3/7d6c6cb3e7effbd842e7202633ebfed9/transformed/jetified-middleware-2.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /home/dima/.gradle/caches/transforms-3/b395d73d00a1ce578a6d379e90752991/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /home/dima/.gradle/caches/transforms-3/b395d73d00a1ce578a6d379e90752991/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/dima/.gradle/caches/transforms-3/6d632040c3a616d46cbdf977a52fc109/transformed/jetified-glide-4.12.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/dima/.gradle/caches/transforms-3/6d632040c3a616d46cbdf977a52fc109/transformed/jetified-glide-4.12.0/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /home/dima/.gradle/caches/transforms-3/2db8771f6cc3ad4b758c89a6a9a6b142/transformed/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /home/dima/.gradle/caches/transforms-3/2db8771f6cc3ad4b758c89a6a9a6b142/transformed/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/dima/.gradle/caches/transforms-3/709573e79a5e8e94fd657d65bc51a2f2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -249,6 +266,10 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/dima/.gradle/ca
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/dima/.gradle/caches/transforms-3/32868e084b86a5eba1cbc9becd646ec4/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite:2.1.0] /home/dima/.gradle/caches/transforms-3/199bf8f3704078abec467141c22a5947/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite:2.1.0] /home/dima/.gradle/caches/transforms-3/199bf8f3704078abec467141c22a5947/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/dima/.gradle/caches/transforms-3/6f069c528f7d769b841cdc24c0846ba2/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/dima/.gradle/caches/transforms-3/6f069c528f7d769b841cdc24c0846ba2/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/dima/.gradle/caches/transforms-3/76464d44bb28b2bf7aede4ce77fff781/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/dima/.gradle/caches/transforms-3/76464d44bb28b2bf7aede4ce77fff781/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dima/.gradle/caches/transforms-3/61760d420bf14935ce85c2f2c9e6d42f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dima/.gradle/caches/transforms-3/61760d420bf14935ce85c2f2c9e6d42f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] /home/dima/.gradle/caches/transforms-3/72473111f3673cc93fca28a8e855b6a4/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -291,3 +312,9 @@ ADDED from [com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gr
 		ADDED from [com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gradle/caches/transforms-3/ac03cc428528b64ebe64a8da4ba29e56/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gradle/caches/transforms-3/ac03cc428528b64ebe64a8da4ba29e56/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
+ADDED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:11:9-13:43
+	android:value
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:13:13-40
+	android:name
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:12:13-84

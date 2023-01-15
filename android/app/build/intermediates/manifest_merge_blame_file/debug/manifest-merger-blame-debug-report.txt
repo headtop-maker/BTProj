@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-9        android:targetSdkVersion="31" />
+9        android:targetSdkVersion="30" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 11-->/home/dima/native/BTProj/android/app/src/debug/AndroidManifest.xml:5:5-77
@@ -81,6 +81,12 @@
 45-->[com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gradle/caches/transforms-3/ac03cc428528b64ebe64a8da4ba29e56/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
 46            android:value="@integer/google_play_services_version" />
 46-->[com.google.android.gms:play-services-basement:18.0.0] /home/dima/.gradle/caches/transforms-3/ac03cc428528b64ebe64a8da4ba29e56/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
-47    </application>
-48
-49</manifest>
+47        <meta-data
+47-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:11:9-13:43
+48            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+48-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:12:13-84
+49            android:value="GlideModule" />
+49-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] /home/dima/.gradle/caches/transforms-3/9dfd1a5d941e40524c71df13bda53822/transformed/jetified-okhttp3-integration-4.12.0/AndroidManifest.xml:13:13-40
+50    </application>
+51
+52</manifest>
