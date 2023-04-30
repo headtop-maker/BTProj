@@ -1,60 +1,63 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 import {
   Text,
   View,
-  Image,
   Button,
-  NativeModules,
   TouchableOpacity,
-  DeviceEventEmitter,
   ScrollView,
+  StyleSheet,
 } from 'react-native';
+
 import useDimensions from '../hooks/useDimensions';
+import RNMethods from '../Methods/RNMethods';
+
+import {firebaseApi} from '../services/DeviceService';
+
+import {
+  connectAsyncBTdevice,
+  startFactory,
+} from '../store/reducers/ActionCreators';
+import {useAppDispatch, useAppSelector} from '../store/storeHooks/redux';
+
 import ImageScreen from './ImageScreen';
-const {ToastKotlin, BTModule} = NativeModules;
-
-type GetDevice = {
-  name: string;
-  value: string;
-};
-
-const RNMethods = {
-  showToast: (message: string, timeOut: number) =>
-    ToastKotlin.show(message, timeOut),
-  getDevice: async (callBack: (data: any) => void) =>
-    await BTModule.getDevice((data: GetDevice[]) => {
-      const obj = Object.entries(data).map(item => ({
-        name: item[0],
-        value: item[1],
-      }));
-      callBack(obj);
-    }),
-  connectDevice: (macAddress: string) => BTModule.connectDeviceFC(macAddress),
-  sendMessage: (message: string) => BTModule.sendMessage(message),
-};
 
 const BtScreen = () => {
-  const [devices, setDevices] = useState<GetDevice[] | undefined>();
-
+  const dispatch = useAppDispatch();
+  const device = useAppSelector(state => state.deviceReducer.devices);
+  const stage = useAppSelector(state => state.deviceReducer.curruntStages);
   const [, , isLandScape] = useDimensions();
+  const {data} = firebaseApi.useFetchAllsQuery(
+    {},
+    {
+      refetchOnMountOrArgChange: true,
+    },
+  );
+
+  const [patchDev, {}] = firebaseApi.usePatchDevMutation();
+  const date = new Date();
 
   return (
     <View
-      style={{
-        flex: 1,
-        flexDirection: isLandScape ? 'row' : 'column',
-      }}>
-      <View style={{flex: 0.5}}>
+      style={[
+        styles.container,
+        {
+          flexDirection: isLandScape ? 'row' : 'column',
+        },
+      ]}>
+      <View style={styles.images}>
         <ImageScreen />
       </View>
-      <View style={{flex: 0.5}}>
+      <View style={styles.devices}>
+        <Text style={styles.bigRed}>{data && data.dev_connect}</Text>
+        <Text style={styles.bigGray}>{stage && stage}</Text>
+
         <ScrollView>
-          {devices ? (
-            devices.map((item, index) => (
+          {device ? (
+            device.map((item, index) => (
               <TouchableOpacity
                 key={'Opa' + index}
-                onPress={() => RNMethods.connectDevice(item.value)}>
+                onPress={() => dispatch(connectAsyncBTdevice(item))}>
                 <Text key={'Key' + index}>
                   {item.name} {item.value}
                 </Text>
@@ -65,20 +68,75 @@ const BtScreen = () => {
           )}
         </ScrollView>
         <Button
-          title="get device"
-          onPress={() => RNMethods.getDevice(setDevices)}
+          title="Start Factory"
+          onPress={() => dispatch(startFactory())}
         />
         <Button
-          title="send message A"
-          onPress={() => RNMethods.sendMessage('A')}
-        />
-        <Button
-          title="send message B"
-          onPress={() => RNMethods.sendMessage('B')}
+          title="Close connection"
+          onPress={() => {
+            patchDev({dev_connect: 'Отключено в ' + date.toString()}).unwrap;
+            RNMethods.closeConnection();
+          }}
         />
       </View>
     </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  bigGray: {
+    color: 'gray',
+    fontWeight: 'bold',
+    fontSize: 15,
+    margin: 5,
+  },
+  bigRed: {
+    color: '#d35f6d',
+    fontWeight: 'bold',
+    fontSize: 15,
+    margin: 5,
+  },
+  images: {
+    flex: 0.5,
+  },
+  devices: {
+    flex: 0.5,
+  },
+});
+
 export default BtScreen;
+
+// const factory = new stagesRunFactory({
+//   firstStage: () => dispatch(getDevices()),
+//   secondStage: () => {
+//     dispatch(
+//       connectAsyncBTdevice({name: 'ESP32test', value: '24:D7:EB:10:04:1E'}),
+//     );
+//   },
+//   thirdStage: () => {
+//     patchDev({dev_6: Math.floor(Math.random() * 100000) + 1}).unwrap;
+//     console.log(data);
+//   },
+// });
+// factory.run();
+
+// const [putDev] = firebaseApi.usePutDevMutation();
+// const [postDev] = firebaseApi.usePostDevMutation();
+
+// {
+/* <Button title="get device" onPress={() => dispatch(getDevices())} />
+<Button
+  title="send message A"
+  onPress={() => RNMethods.sendMessage('A')}
+/>
+<Button
+  title="send message B"
+  onPress={() => RNMethods.sendMessage('B')}
+/>
+<Button title="clear" onPress={() => RNMethods.clearCache()} />
+<Button title="put " onPress={() => putDev(833).unwrap} />
+<Button title="post " onPress={() => postDev({dev_3: 789}).unwrap} /> */
+// }

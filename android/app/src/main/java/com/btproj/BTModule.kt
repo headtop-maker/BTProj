@@ -6,9 +6,12 @@ import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.bluetooth.BluetoothSocket
 import android.content.Context
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule
+import java.io.File
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
@@ -24,6 +27,7 @@ class BTModules(reactContext:ReactApplicationContext):ReactContextBaseJavaModule
     var outStream: OutputStream? = null
     var mSocket: BluetoothSocket? = null
     var mEmitter: DeviceEventManagerModule.RCTDeviceEventEmitter? = null
+    var promise: Promise? = null
     override fun getName(): String {
         return "BTModule"
     }
@@ -73,20 +77,22 @@ class BTModules(reactContext:ReactApplicationContext):ReactContextBaseJavaModule
         btConnection.connect(macAddress)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     @ReactMethod
-    fun connectDeviceFC(macAddress:String){
+    fun connectDeviceFC(macAddress:String,promise: Promise){
         val btManager = reactApplicationContext.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         val btAdapter = btManager.adapter
         if (btAdapter.isEnabled && macAddress.isNotEmpty()) {
             val device = btAdapter.getRemoteDevice(macAddress)
             device.let {
                 Log.d("MyMac", macAddress)
-                connectThread(it)
+                connectThread(it,promise)
             }
         }
     }
 
-    private fun connectThread(device: BluetoothDevice){
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun connectThread(device: BluetoothDevice,promise: Promise){
         val uuid = "00001101-0000-1000-8000-00805F9B34FB"
 
         mSocket = device.createRfcommSocketToServiceRecord(UUID.fromString(uuid))
@@ -95,14 +101,16 @@ class BTModules(reactContext:ReactApplicationContext):ReactContextBaseJavaModule
                 Log.d("MyLog", "Connecting... ")
                 mSocket?.connect()
                 Log.d("MyLog", "Connected ")
+                promise.resolve("connect")
                 receiveThread()
             } catch (i: IOException) {
                 Log.d("MyLog", "Can not connected ")
                closeConnection()
+                promise.reject("error",i.toString())
             }
         }
     }
-
+    @ReactMethod
     fun closeConnection(){
         try {
             mSocket?.close()
@@ -111,6 +119,7 @@ class BTModules(reactContext:ReactApplicationContext):ReactContextBaseJavaModule
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun receiveThread (){
         val buf = ByteArray(4000000)
 
@@ -124,22 +133,19 @@ class BTModules(reactContext:ReactApplicationContext):ReactContextBaseJavaModule
         }
         thread {
             var frame =""
+            var frameSize = 0;
         while (true) {
-
             try {
-
                 val size = inStream?.read(buf)
                 val message = String(buf, 0, size!!)
 
+                if(message.substring(0,4) == "/9j/"){
+                    sendOnUI("status", "refresh")
+                    sendOnUI("base64",frame)
+                    frame=""
+                }
                 if(!message.toBoolean()) {
-//                    Log.d("MyLog",message)
-                    frame+=message
-                    if(message.length<330){
-                        sendOnUI("status", "refresh")
-//                        Thread.sleep(100)
-                      sendOnUI("base64",frame)
-                        frame=""
-                    }
+                        frame+=message
                 }
 
             } catch (i: IOException) {
@@ -158,6 +164,19 @@ class BTModules(reactContext:ReactApplicationContext):ReactContextBaseJavaModule
 
         }
     }
+
+    @ReactMethod
+    fun clearCache() {
+        try {
+            val dir: File = reactApplicationContext.cacheDir
+            for(file in dir.listFiles()!!){
+                file.deleteRecursively();
+            }
+        } catch (i: IOException) {
+
+        }
+    }
+
 
 }
 

@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {View, DeviceEventEmitter} from 'react-native';
-import FastImage from 'react-native-fast-image';
+import {View, DeviceEventEmitter, Image, StyleSheet} from 'react-native';
 import useDimensions from '../hooks/useDimensions';
 
 const ImageScreen = () => {
   const [eventData, setEventData] = useState<string>();
   const [secondFrame, setSecondFrame] = useState<string>();
   const [screenWidth, screenHeigth, isLandScape] = useDimensions();
+
   useEffect(() => {
     const subscription = DeviceEventEmitter.addListener(
       'base64',
@@ -32,25 +32,27 @@ const ImageScreen = () => {
     };
   }, [eventData]);
   return (
-    <View style={{backgroundColor: '#292a2d'}}>
-      <FastImage
-        style={{
-          width: isLandScape ? screenWidth * 0.45 : screenWidth,
-          height: isLandScape ? screenHeigth : screenHeigth * 0.45,
-          alignSelf: 'center',
-          position: 'relative',
-        }}
+    <View style={styles.container}>
+      <Image
+        style={[
+          styles.backImage,
+          {
+            width: isLandScape ? screenWidth * 0.45 : screenWidth,
+            height: isLandScape ? screenHeigth : screenHeigth * 0.45,
+          },
+        ]}
         source={{
           uri: `data:image/jpeg;base64,${secondFrame}`,
         }}
       />
-      <FastImage
-        style={{
-          width: isLandScape ? screenWidth * 0.45 : screenWidth,
-          height: isLandScape ? screenHeigth : screenHeigth * 0.45,
-          alignSelf: 'center',
-          position: 'absolute',
-        }}
+      <Image
+        style={[
+          styles.firstImage,
+          {
+            width: isLandScape ? screenWidth * 0.45 : screenWidth,
+            height: isLandScape ? screenHeigth : screenHeigth * 0.45,
+          },
+        ]}
         source={{
           uri: `data:image/jpeg;base64,${eventData}`,
         }}
@@ -58,5 +60,19 @@ const ImageScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#292a2d',
+  },
+  backImage: {
+    alignSelf: 'center',
+    position: 'relative',
+  },
+  firstImage: {
+    alignSelf: 'center',
+    position: 'absolute',
+  },
+});
 
 export default ImageScreen;
